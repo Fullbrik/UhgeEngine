@@ -39,7 +39,7 @@ public abstract class AssetBundle
         return asset;
     }
 
-    private void AssertIsValidAssetType(Type assetType)
+    private static void AssertIsValidAssetType(Type assetType)
     {
         if (assetType.IsSubclassOf(typeof(Asset)) && !assetType.IsAbstract)
             throw new Exception($"Invalid asset type {assetType.Name}");

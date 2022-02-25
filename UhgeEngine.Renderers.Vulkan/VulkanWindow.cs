@@ -14,7 +14,7 @@ public class VulkanWindow : IDisposable
     {
         _vk = vk;
         if (!vk.TryGetInstanceExtension(_instance, out _surfaceApi))
-            throw new Exception("Failed to get surface api, which is required fot managing vulkan windows.");
+            throw new Exception("Failed to get surface api, which is required for managing vulkan windows.");
         _instance = instance;
         _deviceManager = new VulkanDeviceManager(_vk, _instance, _surfaceApi, _surface);
         _surface = surface;
